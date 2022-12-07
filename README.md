@@ -7,4 +7,6 @@ The user can refresh the displayed images
 
 ## Layout Overview 
 
+![](GalleryAppDetailPage.gif)
+
 ![](GalleryApp.gif)
