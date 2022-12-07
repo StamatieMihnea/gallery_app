@@ -4,9 +4,6 @@ import 'package:gallery_app/src/data/photo_api.dart';
 import 'package:gallery_app/src/models/photo.dart';
 import 'package:http/http.dart';
 
-const String apiKey = 'KH4D_juIz3q6p3KKb5Gc0XNyO3eh73IznNpc7lLdPYw';
-const int imagesPerRequest = 21;
-
 void main() {
   runApp(const GalleryApp());
 }
@@ -42,18 +39,6 @@ class _HomePageState extends State<HomePage> {
   bool _isLoading = true;
   int _page = 1;
 
-  Future<void> _getMovies() async {
-    setState(() {
-      _isLoading = true;
-    });
-    final List<Photo> response = await _photoApi.getPhotos(_page);
-    setState(() {
-      _photos.addAll(response);
-      _page++;
-      _isLoading = false;
-    });
-  }
-
   @override
   void initState() {
     super.initState();
@@ -64,6 +49,18 @@ class _HomePageState extends State<HomePage> {
       if (_scrollController.position.maxScrollExtent - _scrollController.offset < loadMoreOffset && !_isLoading) {
         _getMovies();
       }
+    });
+  }
+
+  Future<void> _getMovies() async {
+    setState(() {
+      _isLoading = true;
+    });
+    final List<Photo> response = await _photoApi.getPhotos(_page);
+    setState(() {
+      _photos.addAll(response);
+      _page++;
+      _isLoading = false;
     });
   }
 
@@ -108,14 +105,14 @@ class _HomePageState extends State<HomePage> {
                               Navigator.pushNamed(
                                 context,
                                 '/photoDetails',
-                                arguments: _photos.elementAt(index),
+                                arguments: _photos[index],
                               );
                             },
                             child: DecoratedBox(
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: NetworkImage(
-                                    _photos.elementAt(index).urls.small,
+                                    _photos[index].urls.small,
                                   ),
                                   fit: BoxFit.contain,
                                 ),
@@ -150,5 +147,11 @@ class _HomePageState extends State<HomePage> {
         },
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _scrollController.dispose();
   }
 }
