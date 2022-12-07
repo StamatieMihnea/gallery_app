@@ -35,8 +35,7 @@ mixin _$Photo {
 
 /// @nodoc
 abstract class $PhotoCopyWith<$Res> {
-  factory $PhotoCopyWith(Photo value, $Res Function(Photo) then) =
-      _$PhotoCopyWithImpl<$Res, Photo>;
+  factory $PhotoCopyWith(Photo value, $Res Function(Photo) then) = _$PhotoCopyWithImpl<$Res, Photo>;
   @useResult
   $Res call(
       {@JsonKey(name: 'created_at') DateTime createdAt,
@@ -49,8 +48,7 @@ abstract class $PhotoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PhotoCopyWithImpl<$Res, $Val extends Photo>
-    implements $PhotoCopyWith<$Res> {
+class _$PhotoCopyWithImpl<$Res, $Val extends Photo> implements $PhotoCopyWith<$Res> {
   _$PhotoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -105,8 +103,7 @@ class _$PhotoCopyWithImpl<$Res, $Val extends Photo>
 
 /// @nodoc
 abstract class _$$Photo$CopyWith<$Res> implements $PhotoCopyWith<$Res> {
-  factory _$$Photo$CopyWith(_$Photo$ value, $Res Function(_$Photo$) then) =
-      __$$Photo$CopyWithImpl<$Res>;
+  factory _$$Photo$CopyWith(_$Photo$ value, $Res Function(_$Photo$) then) = __$$Photo$CopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -122,10 +119,8 @@ abstract class _$$Photo$CopyWith<$Res> implements $PhotoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$Photo$CopyWithImpl<$Res> extends _$PhotoCopyWithImpl<$Res, _$Photo$>
-    implements _$$Photo$CopyWith<$Res> {
-  __$$Photo$CopyWithImpl(_$Photo$ _value, $Res Function(_$Photo$) _then)
-      : super(_value, _then);
+class __$$Photo$CopyWithImpl<$Res> extends _$PhotoCopyWithImpl<$Res, _$Photo$> implements _$$Photo$CopyWith<$Res> {
+  __$$Photo$CopyWithImpl(_$Photo$ _value, $Res Function(_$Photo$) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -165,8 +160,7 @@ class _$Photo$ implements Photo$ {
       @JsonKey(name: 'user') required this.photograph,
       required this.likes});
 
-  factory _$Photo$.fromJson(Map<String, dynamic> json) =>
-      _$$Photo$FromJson(json);
+  factory _$Photo$.fromJson(Map<String, dynamic> json) => _$$Photo$FromJson(json);
 
   @override
   @JsonKey(name: 'created_at')
@@ -190,24 +184,20 @@ class _$Photo$ implements Photo$ {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Photo$ &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt) &&
             (identical(other.urls, urls) || other.urls == urls) &&
-            (identical(other.photograph, photograph) ||
-                other.photograph == photograph) &&
+            (identical(other.photograph, photograph) || other.photograph == photograph) &&
             (identical(other.likes, likes) || other.likes == likes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, createdAt, urls, photograph, likes);
+  int get hashCode => Object.hash(runtimeType, createdAt, urls, photograph, likes);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$Photo$CopyWith<_$Photo$> get copyWith =>
-      __$$Photo$CopyWithImpl<_$Photo$>(this, _$identity);
+  _$$Photo$CopyWith<_$Photo$> get copyWith => __$$Photo$CopyWithImpl<_$Photo$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -239,6 +229,5 @@ abstract class Photo$ implements Photo {
   int get likes;
   @override
   @JsonKey(ignore: true)
-  _$$Photo$CopyWith<_$Photo$> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$Photo$CopyWith<_$Photo$> get copyWith => throw _privateConstructorUsedError;
 }

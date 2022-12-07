@@ -11,6 +11,5 @@ class Photograph with _$Photograph {
     String? location,
   }) = Photograph$;
 
-  factory Photograph.fromJson(Map<dynamic, dynamic> json) =>
-      _$PhotographFromJson(Map<String, dynamic>.from(json));
+  factory Photograph.fromJson(Map<dynamic, dynamic> json) => _$PhotographFromJson(Map<String, dynamic>.from(json));
 }

@@ -11,8 +11,7 @@ _$PhotoUrls$ _$$PhotoUrls$FromJson(Map<String, dynamic> json) => _$PhotoUrls$(
       large: json['regular'] as String,
     );
 
-Map<String, dynamic> _$$PhotoUrls$ToJson(_$PhotoUrls$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$PhotoUrls$ToJson(_$PhotoUrls$ instance) => <String, dynamic>{
       'thumb': instance.small,
       'regular': instance.large,
     };

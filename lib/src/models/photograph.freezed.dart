@@ -25,22 +25,19 @@ mixin _$Photograph {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PhotographCopyWith<Photograph> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PhotographCopyWith<Photograph> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PhotographCopyWith<$Res> {
-  factory $PhotographCopyWith(
-          Photograph value, $Res Function(Photograph) then) =
+  factory $PhotographCopyWith(Photograph value, $Res Function(Photograph) then) =
       _$PhotographCopyWithImpl<$Res, Photograph>;
   @useResult
   $Res call({String name, String? location});
 }
 
 /// @nodoc
-class _$PhotographCopyWithImpl<$Res, $Val extends Photograph>
-    implements $PhotographCopyWith<$Res> {
+class _$PhotographCopyWithImpl<$Res, $Val extends Photograph> implements $PhotographCopyWith<$Res> {
   _$PhotographCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -68,10 +65,8 @@ class _$PhotographCopyWithImpl<$Res, $Val extends Photograph>
 }
 
 /// @nodoc
-abstract class _$$Photograph$CopyWith<$Res>
-    implements $PhotographCopyWith<$Res> {
-  factory _$$Photograph$CopyWith(
-          _$Photograph$ value, $Res Function(_$Photograph$) then) =
+abstract class _$$Photograph$CopyWith<$Res> implements $PhotographCopyWith<$Res> {
+  factory _$$Photograph$CopyWith(_$Photograph$ value, $Res Function(_$Photograph$) then) =
       __$$Photograph$CopyWithImpl<$Res>;
   @override
   @useResult
@@ -79,12 +74,9 @@ abstract class _$$Photograph$CopyWith<$Res>
 }
 
 /// @nodoc
-class __$$Photograph$CopyWithImpl<$Res>
-    extends _$PhotographCopyWithImpl<$Res, _$Photograph$>
+class __$$Photograph$CopyWithImpl<$Res> extends _$PhotographCopyWithImpl<$Res, _$Photograph$>
     implements _$$Photograph$CopyWith<$Res> {
-  __$$Photograph$CopyWithImpl(
-      _$Photograph$ _value, $Res Function(_$Photograph$) _then)
-      : super(_value, _then);
+  __$$Photograph$CopyWithImpl(_$Photograph$ _value, $Res Function(_$Photograph$) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -110,8 +102,7 @@ class __$$Photograph$CopyWithImpl<$Res>
 class _$Photograph$ implements Photograph$ {
   const _$Photograph$({required this.name, this.location});
 
-  factory _$Photograph$.fromJson(Map<String, dynamic> json) =>
-      _$$Photograph$FromJson(json);
+  factory _$Photograph$.fromJson(Map<String, dynamic> json) => _$$Photograph$FromJson(json);
 
   @override
   final String name;
@@ -129,8 +120,7 @@ class _$Photograph$ implements Photograph$ {
         (other.runtimeType == runtimeType &&
             other is _$Photograph$ &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.location, location) ||
-                other.location == location));
+            (identical(other.location, location) || other.location == location));
   }
 
   @JsonKey(ignore: true)
@@ -140,8 +130,7 @@ class _$Photograph$ implements Photograph$ {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$Photograph$CopyWith<_$Photograph$> get copyWith =>
-      __$$Photograph$CopyWithImpl<_$Photograph$>(this, _$identity);
+  _$$Photograph$CopyWith<_$Photograph$> get copyWith => __$$Photograph$CopyWithImpl<_$Photograph$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -152,11 +141,9 @@ class _$Photograph$ implements Photograph$ {
 }
 
 abstract class Photograph$ implements Photograph {
-  const factory Photograph$(
-      {required final String name, final String? location}) = _$Photograph$;
+  const factory Photograph$({required final String name, final String? location}) = _$Photograph$;
 
-  factory Photograph$.fromJson(Map<String, dynamic> json) =
-      _$Photograph$.fromJson;
+  factory Photograph$.fromJson(Map<String, dynamic> json) = _$Photograph$.fromJson;
 
   @override
   String get name;
@@ -164,6 +151,5 @@ abstract class Photograph$ implements Photograph {
   String? get location;
   @override
   @JsonKey(ignore: true)
-  _$$Photograph$CopyWith<_$Photograph$> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$Photograph$CopyWith<_$Photograph$> get copyWith => throw _privateConstructorUsedError;
 }

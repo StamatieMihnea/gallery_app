@@ -61,10 +61,7 @@ class _HomePageState extends State<HomePage> {
     _getMovies();
     _scrollController.addListener(() {
       final double loadMoreOffset = MediaQuery.of(context).size.height / 4;
-      if (_scrollController.position.maxScrollExtent -
-                  _scrollController.offset <
-              loadMoreOffset &&
-          !_isLoading) {
+      if (_scrollController.position.maxScrollExtent - _scrollController.offset < loadMoreOffset && !_isLoading) {
         _getMovies();
       }
     });
@@ -99,8 +96,7 @@ class _HomePageState extends State<HomePage> {
                   SliverPadding(
                     padding: const EdgeInsets.all(10),
                     sliver: SliverGrid(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         mainAxisSpacing: 5,
                         crossAxisSpacing: 5,

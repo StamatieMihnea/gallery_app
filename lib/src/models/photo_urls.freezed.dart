@@ -27,23 +27,18 @@ mixin _$PhotoUrls {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PhotoUrlsCopyWith<PhotoUrls> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PhotoUrlsCopyWith<PhotoUrls> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PhotoUrlsCopyWith<$Res> {
-  factory $PhotoUrlsCopyWith(PhotoUrls value, $Res Function(PhotoUrls) then) =
-      _$PhotoUrlsCopyWithImpl<$Res, PhotoUrls>;
+  factory $PhotoUrlsCopyWith(PhotoUrls value, $Res Function(PhotoUrls) then) = _$PhotoUrlsCopyWithImpl<$Res, PhotoUrls>;
   @useResult
-  $Res call(
-      {@JsonKey(name: 'thumb') String small,
-      @JsonKey(name: 'regular') String large});
+  $Res call({@JsonKey(name: 'thumb') String small, @JsonKey(name: 'regular') String large});
 }
 
 /// @nodoc
-class _$PhotoUrlsCopyWithImpl<$Res, $Val extends PhotoUrls>
-    implements $PhotoUrlsCopyWith<$Res> {
+class _$PhotoUrlsCopyWithImpl<$Res, $Val extends PhotoUrls> implements $PhotoUrlsCopyWith<$Res> {
   _$PhotoUrlsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -72,23 +67,17 @@ class _$PhotoUrlsCopyWithImpl<$Res, $Val extends PhotoUrls>
 
 /// @nodoc
 abstract class _$$PhotoUrls$CopyWith<$Res> implements $PhotoUrlsCopyWith<$Res> {
-  factory _$$PhotoUrls$CopyWith(
-          _$PhotoUrls$ value, $Res Function(_$PhotoUrls$) then) =
+  factory _$$PhotoUrls$CopyWith(_$PhotoUrls$ value, $Res Function(_$PhotoUrls$) then) =
       __$$PhotoUrls$CopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(name: 'thumb') String small,
-      @JsonKey(name: 'regular') String large});
+  $Res call({@JsonKey(name: 'thumb') String small, @JsonKey(name: 'regular') String large});
 }
 
 /// @nodoc
-class __$$PhotoUrls$CopyWithImpl<$Res>
-    extends _$PhotoUrlsCopyWithImpl<$Res, _$PhotoUrls$>
+class __$$PhotoUrls$CopyWithImpl<$Res> extends _$PhotoUrlsCopyWithImpl<$Res, _$PhotoUrls$>
     implements _$$PhotoUrls$CopyWith<$Res> {
-  __$$PhotoUrls$CopyWithImpl(
-      _$PhotoUrls$ _value, $Res Function(_$PhotoUrls$) _then)
-      : super(_value, _then);
+  __$$PhotoUrls$CopyWithImpl(_$PhotoUrls$ _value, $Res Function(_$PhotoUrls$) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -112,12 +101,9 @@ class __$$PhotoUrls$CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PhotoUrls$ implements PhotoUrls$ {
-  const _$PhotoUrls$(
-      {@JsonKey(name: 'thumb') required this.small,
-      @JsonKey(name: 'regular') required this.large});
+  const _$PhotoUrls$({@JsonKey(name: 'thumb') required this.small, @JsonKey(name: 'regular') required this.large});
 
-  factory _$PhotoUrls$.fromJson(Map<String, dynamic> json) =>
-      _$$PhotoUrls$FromJson(json);
+  factory _$PhotoUrls$.fromJson(Map<String, dynamic> json) => _$$PhotoUrls$FromJson(json);
 
   @override
   @JsonKey(name: 'thumb')
@@ -147,8 +133,7 @@ class _$PhotoUrls$ implements PhotoUrls$ {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PhotoUrls$CopyWith<_$PhotoUrls$> get copyWith =>
-      __$$PhotoUrls$CopyWithImpl<_$PhotoUrls$>(this, _$identity);
+  _$$PhotoUrls$CopyWith<_$PhotoUrls$> get copyWith => __$$PhotoUrls$CopyWithImpl<_$PhotoUrls$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -163,8 +148,7 @@ abstract class PhotoUrls$ implements PhotoUrls {
       {@JsonKey(name: 'thumb') required final String small,
       @JsonKey(name: 'regular') required final String large}) = _$PhotoUrls$;
 
-  factory PhotoUrls$.fromJson(Map<String, dynamic> json) =
-      _$PhotoUrls$.fromJson;
+  factory PhotoUrls$.fromJson(Map<String, dynamic> json) = _$PhotoUrls$.fromJson;
 
   @override
   @JsonKey(name: 'thumb')
@@ -174,6 +158,5 @@ abstract class PhotoUrls$ implements PhotoUrls {
   String get large;
   @override
   @JsonKey(ignore: true)
-  _$$PhotoUrls$CopyWith<_$PhotoUrls$> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PhotoUrls$CopyWith<_$PhotoUrls$> get copyWith => throw _privateConstructorUsedError;
 }
