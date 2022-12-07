@@ -9,4 +9,3 @@ The user can refresh the displayed images
 
 ![](GalleryAppDetailPage.gif)
 
-![](GalleryApp.gif)
