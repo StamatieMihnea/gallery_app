@@ -1,8 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-part 'photograph.freezed.dart';
-
-part 'photograph.g.dart';
+part of 'index.dart';
 
 @freezed
 class Photograph with _$Photograph {
@@ -11,5 +7,6 @@ class Photograph with _$Photograph {
     String? location,
   }) = Photograph$;
 
-  factory Photograph.fromJson(Map<dynamic, dynamic> json) => _$PhotographFromJson(Map<String, dynamic>.from(json));
+  factory Photograph.fromJson(Map<dynamic, dynamic> json) =>
+      _$PhotographFromJson(Map<String, dynamic>.from(json));
 }

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:gallery_app/src/models/photo.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+import 'package:gallery_app/src/models/index.dart';
+import 'package:redux/redux.dart';
 
 class PhotoDetails extends StatelessWidget {
   const PhotoDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final Photo photo = ModalRoute.of(context)!.settings.arguments! as Photo;
+    final Store<AppState> store = StoreProvider.of<AppState>(context);
+    final Photo photo = store.state.selectedPhoto!;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20),

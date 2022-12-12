@@ -1,8 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-part 'photo_urls.freezed.dart';
-
-part 'photo_urls.g.dart';
+part of 'index.dart';
 
 @freezed
 class PhotoUrls with _$PhotoUrls {
@@ -11,5 +7,6 @@ class PhotoUrls with _$PhotoUrls {
     @JsonKey(name: 'regular') required String large,
   }) = PhotoUrls$;
 
-  factory PhotoUrls.fromJson(Map<dynamic, dynamic> json) => _$PhotoUrlsFromJson(Map<String, dynamic>.from(json));
+  factory PhotoUrls.fromJson(Map<dynamic, dynamic> json) =>
+      _$PhotoUrlsFromJson(Map<String, dynamic>.from(json));
 }

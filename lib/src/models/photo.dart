@@ -1,10 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:gallery_app/src/models/photo_urls.dart';
-import 'package:gallery_app/src/models/photograph.dart';
-
-part 'photo.freezed.dart';
-
-part 'photo.g.dart';
+part of 'index.dart';
 
 @freezed
 class Photo with _$Photo {
@@ -15,5 +9,6 @@ class Photo with _$Photo {
     required int likes,
   }) = Photo$;
 
-  factory Photo.fromJson(Map<dynamic, dynamic> json) => _$PhotoFromJson(Map<String, dynamic>.from(json));
+  factory Photo.fromJson(Map<dynamic, dynamic> json) =>
+      _$PhotoFromJson(Map<String, dynamic>.from(json));
 }

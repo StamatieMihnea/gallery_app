@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:gallery_app/src/models/photo.dart';
+import 'package:gallery_app/src/models/index.dart';
 import 'package:http/http.dart';
 
-const String _apiKey = 'KH4D_juIz3q6p3KKb5Gc0XNyO3eh73IznNpc7lLdPYw';
+const String _apiKey = 'DOOkEvenmrwasO0p7e-W9e6ATuqnWmV4QADheTV2noo';
 const int _imagesPerRequest = 21;
 
 class PhotoApi {
@@ -19,6 +19,8 @@ class PhotoApi {
     );
 
     final List<dynamic> photosData = jsonDecode(response.body) as List<dynamic>;
-    return photosData.map((dynamic photo) => Photo.fromJson(photo as Map<String, dynamic>)).toList();
+    return photosData
+        .map((dynamic photo) => Photo.fromJson(photo as Map<String, dynamic>))
+        .toList();
   }
 }
