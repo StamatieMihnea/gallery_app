@@ -44,8 +44,7 @@ AppState _refreshPhotosStart(AppState state, RefreshPhotosStart action) {
   );
 }
 
-AppState _refreshPhotosSuccessful(
-    AppState state, RefreshPhotosSuccessful action) {
+AppState _refreshPhotosSuccessful(AppState state, RefreshPhotosSuccessful action) {
   return state.copyWith(
     photos: <Photo>[...action.photos],
     page: 1,

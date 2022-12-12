@@ -25,38 +25,31 @@ _$PhotoUrls$ _$$PhotoUrls$FromJson(Map<String, dynamic> json) => _$PhotoUrls$(
       large: json['regular'] as String,
     );
 
-Map<String, dynamic> _$$PhotoUrls$ToJson(_$PhotoUrls$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$PhotoUrls$ToJson(_$PhotoUrls$ instance) => <String, dynamic>{
       'thumb': instance.small,
       'regular': instance.large,
     };
 
-_$Photograph$ _$$Photograph$FromJson(Map<String, dynamic> json) =>
-    _$Photograph$(
+_$Photograph$ _$$Photograph$FromJson(Map<String, dynamic> json) => _$Photograph$(
       name: json['name'] as String,
       location: json['location'] as String?,
     );
 
-Map<String, dynamic> _$$Photograph$ToJson(_$Photograph$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$Photograph$ToJson(_$Photograph$ instance) => <String, dynamic>{
       'name': instance.name,
       'location': instance.location,
     };
 
 _$AppState$ _$$AppState$FromJson(Map<String, dynamic> json) => _$AppState$(
-      photos: (json['photos'] as List<dynamic>?)
-              ?.map((e) => Photo.fromJson(e as Map<String, dynamic>))
-              .toList() ??
+      photos: (json['photos'] as List<dynamic>?)?.map((e) => Photo.fromJson(e as Map<String, dynamic>)).toList() ??
           const <Photo>[],
       isLoading: json['isLoading'] as bool? ?? true,
-      selectedPhoto: json['selectedPhoto'] == null
-          ? null
-          : Photo.fromJson(json['selectedPhoto'] as Map<String, dynamic>),
+      selectedPhoto:
+          json['selectedPhoto'] == null ? null : Photo.fromJson(json['selectedPhoto'] as Map<String, dynamic>),
       page: json['page'] as int? ?? 1,
     );
 
-Map<String, dynamic> _$$AppState$ToJson(_$AppState$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$AppState$ToJson(_$AppState$ instance) => <String, dynamic>{
       'photos': instance.photos,
       'isLoading': instance.isLoading,
       'selectedPhoto': instance.selectedPhoto,

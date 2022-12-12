@@ -7,6 +7,5 @@ class PhotoUrls with _$PhotoUrls {
     @JsonKey(name: 'regular') required String large,
   }) = PhotoUrls$;
 
-  factory PhotoUrls.fromJson(Map<dynamic, dynamic> json) =>
-      _$PhotoUrlsFromJson(Map<String, dynamic>.from(json));
+  factory PhotoUrls.fromJson(Map<dynamic, dynamic> json) => _$PhotoUrlsFromJson(Map<String, dynamic>.from(json));
 }

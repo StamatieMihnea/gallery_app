@@ -16,21 +16,17 @@ class AppEpics {
     ]);
   }
 
-  Stream<dynamic> _getPhotosStart(
-      Stream<GetPhotosStart> actions, EpicStore<AppState> store) {
+  Stream<dynamic> _getPhotosStart(Stream<GetPhotosStart> actions, EpicStore<AppState> store) {
     return actions
         .asyncMap((GetPhotosStart action) => _api.getPhotos(store.state.page))
         .map((List<Photo> photos) => GetPhotos.successful(photos))
-        .onErrorReturnWith((Object error, StackTrace stackTrace) =>
-            GetPhotos.error(error, stackTrace));
+        .onErrorReturnWith((Object error, StackTrace stackTrace) => GetPhotos.error(error, stackTrace));
   }
 
-  Stream<dynamic> _refreshPhotosStart(
-      Stream<RefreshPhotosStart> actions, EpicStore<AppState> store) {
+  Stream<dynamic> _refreshPhotosStart(Stream<RefreshPhotosStart> actions, EpicStore<AppState> store) {
     return actions
         .asyncMap((RefreshPhotosStart action) => _api.getPhotos(1))
         .map((List<Photo> photos) => RefreshPhotos.successful(photos))
-        .onErrorReturnWith((Object error, StackTrace stackTrace) =>
-            RefreshPhotos.error(error, stackTrace));
+        .onErrorReturnWith((Object error, StackTrace stackTrace) => RefreshPhotos.error(error, stackTrace));
   }
 }

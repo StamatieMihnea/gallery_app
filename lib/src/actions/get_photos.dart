@@ -6,6 +6,5 @@ class GetPhotos with _$GetPhotos {
 
   const factory GetPhotos.successful(List<Photo> photos) = GetPhotosSuccessful;
 
-  const factory GetPhotos.error(Object error, StackTrace stackTrace) =
-      GetPhotosError;
+  const factory GetPhotos.error(Object error, StackTrace stackTrace) = GetPhotosError;
 }

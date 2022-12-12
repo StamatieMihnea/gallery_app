@@ -20,10 +20,7 @@ class HomePage extends StatelessWidget {
         final ScrollController scrollController = ScrollController();
         scrollController.addListener(() {
           final double loadMoreOffset = MediaQuery.of(context).size.height / 4;
-          if (scrollController.position.maxScrollExtent -
-                      scrollController.offset <
-                  loadMoreOffset &&
-              !isLoading) {
+          if (scrollController.position.maxScrollExtent - scrollController.offset < loadMoreOffset && !isLoading) {
             store.dispatch(const GetPhotosStart());
           }
         });
@@ -54,8 +51,7 @@ class HomePage extends StatelessWidget {
                       SliverPadding(
                         padding: const EdgeInsets.all(10),
                         sliver: SliverGrid(
-                          gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3,
                             mainAxisSpacing: 5,
                             crossAxisSpacing: 5,

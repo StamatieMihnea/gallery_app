@@ -64,13 +64,11 @@ mixin _$GetPhotos {
 
 /// @nodoc
 abstract class $GetPhotosCopyWith<$Res> {
-  factory $GetPhotosCopyWith(GetPhotos value, $Res Function(GetPhotos) then) =
-      _$GetPhotosCopyWithImpl<$Res, GetPhotos>;
+  factory $GetPhotosCopyWith(GetPhotos value, $Res Function(GetPhotos) then) = _$GetPhotosCopyWithImpl<$Res, GetPhotos>;
 }
 
 /// @nodoc
-class _$GetPhotosCopyWithImpl<$Res, $Val extends GetPhotos>
-    implements $GetPhotosCopyWith<$Res> {
+class _$GetPhotosCopyWithImpl<$Res, $Val extends GetPhotos> implements $GetPhotosCopyWith<$Res> {
   _$GetPhotosCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -81,18 +79,14 @@ class _$GetPhotosCopyWithImpl<$Res, $Val extends GetPhotos>
 
 /// @nodoc
 abstract class _$$GetPhotosStartCopyWith<$Res> {
-  factory _$$GetPhotosStartCopyWith(
-          _$GetPhotosStart value, $Res Function(_$GetPhotosStart) then) =
+  factory _$$GetPhotosStartCopyWith(_$GetPhotosStart value, $Res Function(_$GetPhotosStart) then) =
       __$$GetPhotosStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetPhotosStartCopyWithImpl<$Res>
-    extends _$GetPhotosCopyWithImpl<$Res, _$GetPhotosStart>
+class __$$GetPhotosStartCopyWithImpl<$Res> extends _$GetPhotosCopyWithImpl<$Res, _$GetPhotosStart>
     implements _$$GetPhotosStartCopyWith<$Res> {
-  __$$GetPhotosStartCopyWithImpl(
-      _$GetPhotosStart _value, $Res Function(_$GetPhotosStart) _then)
-      : super(_value, _then);
+  __$$GetPhotosStartCopyWithImpl(_$GetPhotosStart _value, $Res Function(_$GetPhotosStart) _then) : super(_value, _then);
 }
 
 /// @nodoc
@@ -107,8 +101,7 @@ class _$GetPhotosStart implements GetPhotosStart {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetPhotosStart);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetPhotosStart);
   }
 
   @override
@@ -189,19 +182,16 @@ abstract class GetPhotosStart implements GetPhotos {
 
 /// @nodoc
 abstract class _$$GetPhotosSuccessfulCopyWith<$Res> {
-  factory _$$GetPhotosSuccessfulCopyWith(_$GetPhotosSuccessful value,
-          $Res Function(_$GetPhotosSuccessful) then) =
+  factory _$$GetPhotosSuccessfulCopyWith(_$GetPhotosSuccessful value, $Res Function(_$GetPhotosSuccessful) then) =
       __$$GetPhotosSuccessfulCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Photo> photos});
 }
 
 /// @nodoc
-class __$$GetPhotosSuccessfulCopyWithImpl<$Res>
-    extends _$GetPhotosCopyWithImpl<$Res, _$GetPhotosSuccessful>
+class __$$GetPhotosSuccessfulCopyWithImpl<$Res> extends _$GetPhotosCopyWithImpl<$Res, _$GetPhotosSuccessful>
     implements _$$GetPhotosSuccessfulCopyWith<$Res> {
-  __$$GetPhotosSuccessfulCopyWithImpl(
-      _$GetPhotosSuccessful _value, $Res Function(_$GetPhotosSuccessful) _then)
+  __$$GetPhotosSuccessfulCopyWithImpl(_$GetPhotosSuccessful _value, $Res Function(_$GetPhotosSuccessful) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -245,15 +235,13 @@ class _$GetPhotosSuccessful implements GetPhotosSuccessful {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_photos));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_photos));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetPhotosSuccessfulCopyWith<_$GetPhotosSuccessful> get copyWith =>
-      __$$GetPhotosSuccessfulCopyWithImpl<_$GetPhotosSuccessful>(
-          this, _$identity);
+      __$$GetPhotosSuccessfulCopyWithImpl<_$GetPhotosSuccessful>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -325,31 +313,25 @@ class _$GetPhotosSuccessful implements GetPhotosSuccessful {
 }
 
 abstract class GetPhotosSuccessful implements GetPhotos {
-  const factory GetPhotosSuccessful(final List<Photo> photos) =
-      _$GetPhotosSuccessful;
+  const factory GetPhotosSuccessful(final List<Photo> photos) = _$GetPhotosSuccessful;
 
   List<Photo> get photos;
   @JsonKey(ignore: true)
-  _$$GetPhotosSuccessfulCopyWith<_$GetPhotosSuccessful> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetPhotosSuccessfulCopyWith<_$GetPhotosSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetPhotosErrorCopyWith<$Res> {
-  factory _$$GetPhotosErrorCopyWith(
-          _$GetPhotosError value, $Res Function(_$GetPhotosError) then) =
+  factory _$$GetPhotosErrorCopyWith(_$GetPhotosError value, $Res Function(_$GetPhotosError) then) =
       __$$GetPhotosErrorCopyWithImpl<$Res>;
   @useResult
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class __$$GetPhotosErrorCopyWithImpl<$Res>
-    extends _$GetPhotosCopyWithImpl<$Res, _$GetPhotosError>
+class __$$GetPhotosErrorCopyWithImpl<$Res> extends _$GetPhotosCopyWithImpl<$Res, _$GetPhotosError>
     implements _$$GetPhotosErrorCopyWith<$Res> {
-  __$$GetPhotosErrorCopyWithImpl(
-      _$GetPhotosError _value, $Res Function(_$GetPhotosError) _then)
-      : super(_value, _then);
+  __$$GetPhotosErrorCopyWithImpl(_$GetPhotosError _value, $Res Function(_$GetPhotosError) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -388,13 +370,11 @@ class _$GetPhotosError implements GetPhotosError {
         (other.runtimeType == runtimeType &&
             other is _$GetPhotosError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            (identical(other.stackTrace, stackTrace) ||
-                other.stackTrace == stackTrace));
+            (identical(other.stackTrace, stackTrace) || other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
 
   @JsonKey(ignore: true)
   @override
@@ -472,14 +452,12 @@ class _$GetPhotosError implements GetPhotosError {
 }
 
 abstract class GetPhotosError implements GetPhotos {
-  const factory GetPhotosError(
-      final Object error, final StackTrace stackTrace) = _$GetPhotosError;
+  const factory GetPhotosError(final Object error, final StackTrace stackTrace) = _$GetPhotosError;
 
   Object get error;
   StackTrace get stackTrace;
   @JsonKey(ignore: true)
-  _$$GetPhotosErrorCopyWith<_$GetPhotosError> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetPhotosErrorCopyWith<_$GetPhotosError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -487,14 +465,12 @@ mixin _$SelectPhoto {
   Photo get selectedPhoto => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $SelectPhotoCopyWith<SelectPhoto> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SelectPhotoCopyWith<SelectPhoto> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SelectPhotoCopyWith<$Res> {
-  factory $SelectPhotoCopyWith(
-          SelectPhoto value, $Res Function(SelectPhoto) then) =
+  factory $SelectPhotoCopyWith(SelectPhoto value, $Res Function(SelectPhoto) then) =
       _$SelectPhotoCopyWithImpl<$Res, SelectPhoto>;
   @useResult
   $Res call({Photo selectedPhoto});
@@ -503,8 +479,7 @@ abstract class $SelectPhotoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SelectPhotoCopyWithImpl<$Res, $Val extends SelectPhoto>
-    implements $SelectPhotoCopyWith<$Res> {
+class _$SelectPhotoCopyWithImpl<$Res, $Val extends SelectPhoto> implements $SelectPhotoCopyWith<$Res> {
   _$SelectPhotoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -535,10 +510,8 @@ class _$SelectPhotoCopyWithImpl<$Res, $Val extends SelectPhoto>
 }
 
 /// @nodoc
-abstract class _$$SelectPhoto$CopyWith<$Res>
-    implements $SelectPhotoCopyWith<$Res> {
-  factory _$$SelectPhoto$CopyWith(
-          _$SelectPhoto$ value, $Res Function(_$SelectPhoto$) then) =
+abstract class _$$SelectPhoto$CopyWith<$Res> implements $SelectPhotoCopyWith<$Res> {
+  factory _$$SelectPhoto$CopyWith(_$SelectPhoto$ value, $Res Function(_$SelectPhoto$) then) =
       __$$SelectPhoto$CopyWithImpl<$Res>;
   @override
   @useResult
@@ -549,12 +522,9 @@ abstract class _$$SelectPhoto$CopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SelectPhoto$CopyWithImpl<$Res>
-    extends _$SelectPhotoCopyWithImpl<$Res, _$SelectPhoto$>
+class __$$SelectPhoto$CopyWithImpl<$Res> extends _$SelectPhotoCopyWithImpl<$Res, _$SelectPhoto$>
     implements _$$SelectPhoto$CopyWith<$Res> {
-  __$$SelectPhoto$CopyWithImpl(
-      _$SelectPhoto$ _value, $Res Function(_$SelectPhoto$) _then)
-      : super(_value, _then);
+  __$$SelectPhoto$CopyWithImpl(_$SelectPhoto$ _value, $Res Function(_$SelectPhoto$) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -588,8 +558,7 @@ class _$SelectPhoto$ implements SelectPhoto$ {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SelectPhoto$ &&
-            (identical(other.selectedPhoto, selectedPhoto) ||
-                other.selectedPhoto == selectedPhoto));
+            (identical(other.selectedPhoto, selectedPhoto) || other.selectedPhoto == selectedPhoto));
   }
 
   @override
@@ -609,8 +578,7 @@ abstract class SelectPhoto$ implements SelectPhoto {
   Photo get selectedPhoto;
   @override
   @JsonKey(ignore: true)
-  _$$SelectPhoto$CopyWith<_$SelectPhoto$> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SelectPhoto$CopyWith<_$SelectPhoto$> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -663,14 +631,12 @@ mixin _$RefreshPhotos {
 
 /// @nodoc
 abstract class $RefreshPhotosCopyWith<$Res> {
-  factory $RefreshPhotosCopyWith(
-          RefreshPhotos value, $Res Function(RefreshPhotos) then) =
+  factory $RefreshPhotosCopyWith(RefreshPhotos value, $Res Function(RefreshPhotos) then) =
       _$RefreshPhotosCopyWithImpl<$Res, RefreshPhotos>;
 }
 
 /// @nodoc
-class _$RefreshPhotosCopyWithImpl<$Res, $Val extends RefreshPhotos>
-    implements $RefreshPhotosCopyWith<$Res> {
+class _$RefreshPhotosCopyWithImpl<$Res, $Val extends RefreshPhotos> implements $RefreshPhotosCopyWith<$Res> {
   _$RefreshPhotosCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -681,17 +647,14 @@ class _$RefreshPhotosCopyWithImpl<$Res, $Val extends RefreshPhotos>
 
 /// @nodoc
 abstract class _$$RefreshPhotosStartCopyWith<$Res> {
-  factory _$$RefreshPhotosStartCopyWith(_$RefreshPhotosStart value,
-          $Res Function(_$RefreshPhotosStart) then) =
+  factory _$$RefreshPhotosStartCopyWith(_$RefreshPhotosStart value, $Res Function(_$RefreshPhotosStart) then) =
       __$$RefreshPhotosStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RefreshPhotosStartCopyWithImpl<$Res>
-    extends _$RefreshPhotosCopyWithImpl<$Res, _$RefreshPhotosStart>
+class __$$RefreshPhotosStartCopyWithImpl<$Res> extends _$RefreshPhotosCopyWithImpl<$Res, _$RefreshPhotosStart>
     implements _$$RefreshPhotosStartCopyWith<$Res> {
-  __$$RefreshPhotosStartCopyWithImpl(
-      _$RefreshPhotosStart _value, $Res Function(_$RefreshPhotosStart) _then)
+  __$$RefreshPhotosStartCopyWithImpl(_$RefreshPhotosStart _value, $Res Function(_$RefreshPhotosStart) _then)
       : super(_value, _then);
 }
 
@@ -707,8 +670,7 @@ class _$RefreshPhotosStart implements RefreshPhotosStart {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$RefreshPhotosStart);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$RefreshPhotosStart);
   }
 
   @override
@@ -789,19 +751,18 @@ abstract class RefreshPhotosStart implements RefreshPhotos {
 
 /// @nodoc
 abstract class _$$RefreshPhotosSuccessfulCopyWith<$Res> {
-  factory _$$RefreshPhotosSuccessfulCopyWith(_$RefreshPhotosSuccessful value,
-          $Res Function(_$RefreshPhotosSuccessful) then) =
+  factory _$$RefreshPhotosSuccessfulCopyWith(
+          _$RefreshPhotosSuccessful value, $Res Function(_$RefreshPhotosSuccessful) then) =
       __$$RefreshPhotosSuccessfulCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Photo> photos});
 }
 
 /// @nodoc
-class __$$RefreshPhotosSuccessfulCopyWithImpl<$Res>
-    extends _$RefreshPhotosCopyWithImpl<$Res, _$RefreshPhotosSuccessful>
+class __$$RefreshPhotosSuccessfulCopyWithImpl<$Res> extends _$RefreshPhotosCopyWithImpl<$Res, _$RefreshPhotosSuccessful>
     implements _$$RefreshPhotosSuccessfulCopyWith<$Res> {
-  __$$RefreshPhotosSuccessfulCopyWithImpl(_$RefreshPhotosSuccessful _value,
-      $Res Function(_$RefreshPhotosSuccessful) _then)
+  __$$RefreshPhotosSuccessfulCopyWithImpl(
+      _$RefreshPhotosSuccessful _value, $Res Function(_$RefreshPhotosSuccessful) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -845,15 +806,13 @@ class _$RefreshPhotosSuccessful implements RefreshPhotosSuccessful {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_photos));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_photos));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RefreshPhotosSuccessfulCopyWith<_$RefreshPhotosSuccessful> get copyWith =>
-      __$$RefreshPhotosSuccessfulCopyWithImpl<_$RefreshPhotosSuccessful>(
-          this, _$identity);
+      __$$RefreshPhotosSuccessfulCopyWithImpl<_$RefreshPhotosSuccessful>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -925,30 +884,25 @@ class _$RefreshPhotosSuccessful implements RefreshPhotosSuccessful {
 }
 
 abstract class RefreshPhotosSuccessful implements RefreshPhotos {
-  const factory RefreshPhotosSuccessful(final List<Photo> photos) =
-      _$RefreshPhotosSuccessful;
+  const factory RefreshPhotosSuccessful(final List<Photo> photos) = _$RefreshPhotosSuccessful;
 
   List<Photo> get photos;
   @JsonKey(ignore: true)
-  _$$RefreshPhotosSuccessfulCopyWith<_$RefreshPhotosSuccessful> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RefreshPhotosSuccessfulCopyWith<_$RefreshPhotosSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$RefreshPhotosErrorCopyWith<$Res> {
-  factory _$$RefreshPhotosErrorCopyWith(_$RefreshPhotosError value,
-          $Res Function(_$RefreshPhotosError) then) =
+  factory _$$RefreshPhotosErrorCopyWith(_$RefreshPhotosError value, $Res Function(_$RefreshPhotosError) then) =
       __$$RefreshPhotosErrorCopyWithImpl<$Res>;
   @useResult
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class __$$RefreshPhotosErrorCopyWithImpl<$Res>
-    extends _$RefreshPhotosCopyWithImpl<$Res, _$RefreshPhotosError>
+class __$$RefreshPhotosErrorCopyWithImpl<$Res> extends _$RefreshPhotosCopyWithImpl<$Res, _$RefreshPhotosError>
     implements _$$RefreshPhotosErrorCopyWith<$Res> {
-  __$$RefreshPhotosErrorCopyWithImpl(
-      _$RefreshPhotosError _value, $Res Function(_$RefreshPhotosError) _then)
+  __$$RefreshPhotosErrorCopyWithImpl(_$RefreshPhotosError _value, $Res Function(_$RefreshPhotosError) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -988,20 +942,17 @@ class _$RefreshPhotosError implements RefreshPhotosError {
         (other.runtimeType == runtimeType &&
             other is _$RefreshPhotosError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            (identical(other.stackTrace, stackTrace) ||
-                other.stackTrace == stackTrace));
+            (identical(other.stackTrace, stackTrace) || other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RefreshPhotosErrorCopyWith<_$RefreshPhotosError> get copyWith =>
-      __$$RefreshPhotosErrorCopyWithImpl<_$RefreshPhotosError>(
-          this, _$identity);
+      __$$RefreshPhotosErrorCopyWithImpl<_$RefreshPhotosError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1073,12 +1024,10 @@ class _$RefreshPhotosError implements RefreshPhotosError {
 }
 
 abstract class RefreshPhotosError implements RefreshPhotos {
-  const factory RefreshPhotosError(
-      final Object error, final StackTrace stackTrace) = _$RefreshPhotosError;
+  const factory RefreshPhotosError(final Object error, final StackTrace stackTrace) = _$RefreshPhotosError;
 
   Object get error;
   StackTrace get stackTrace;
   @JsonKey(ignore: true)
-  _$$RefreshPhotosErrorCopyWith<_$RefreshPhotosError> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RefreshPhotosErrorCopyWith<_$RefreshPhotosError> get copyWith => throw _privateConstructorUsedError;
 }

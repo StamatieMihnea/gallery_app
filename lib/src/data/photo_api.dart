@@ -19,8 +19,6 @@ class PhotoApi {
     );
 
     final List<dynamic> photosData = jsonDecode(response.body) as List<dynamic>;
-    return photosData
-        .map((dynamic photo) => Photo.fromJson(photo as Map<String, dynamic>))
-        .toList();
+    return photosData.map((dynamic photo) => Photo.fromJson(photo as Map<String, dynamic>)).toList();
   }
 }
