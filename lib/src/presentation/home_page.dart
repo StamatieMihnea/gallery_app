@@ -4,6 +4,7 @@ import 'package:gallery_app/src/actions/index.dart';
 import 'package:gallery_app/src/models/index.dart';
 import 'package:redux/redux.dart';
 
+// TODO(MIHNEA): Replace with Stateful Widget if any kind of controller is needed
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -58,9 +59,10 @@ class HomePage extends StatelessWidget {
                           ),
                           delegate: SliverChildBuilderDelegate(
                             (BuildContext context, int index) {
+                              final Photo photo = photos[index];
                               return GestureDetector(
                                 onTap: () {
-                                  store.dispatch(SelectPhoto(photos[index]));
+                                  store.dispatch(SelectPhoto(photo));
                                   Navigator.pushNamed(
                                     context,
                                     '/photoDetails',
@@ -70,7 +72,7 @@ class HomePage extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       image: NetworkImage(
-                                        photos[index].urls.small,
+                                        photo.urls.small,
                                       ),
                                       fit: BoxFit.contain,
                                     ),
