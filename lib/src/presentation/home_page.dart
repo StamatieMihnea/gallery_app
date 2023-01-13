@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   void _onScroll() {
     final double loadMoreOffset = MediaQuery.of(context).size.height / 4;
     final double maxScrollValue = _scrollController.position.maxScrollExtent;
-    final double currentScrollValue =_scrollController.offset;
+    final double currentScrollValue = _scrollController.offset;
     final bool isLoading = _store.state.isLoading;
     if (maxScrollValue - currentScrollValue < loadMoreOffset && !isLoading) {
       _store.dispatch(const GetPhotosStart());
@@ -124,5 +124,4 @@ class _HomePageState extends State<HomePage> {
       },
     );
   }
-
 }
