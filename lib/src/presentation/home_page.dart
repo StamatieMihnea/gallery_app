@@ -4,27 +4,42 @@ import 'package:gallery_app/src/actions/index.dart';
 import 'package:gallery_app/src/models/index.dart';
 import 'package:redux/redux.dart';
 
-// TODO(MIHNEA): Replace with Stateful Widget if any kind of controller is needed
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final Store<AppState> store = StoreProvider.of<AppState>(context);
+  State<HomePage> createState() => _HomePageState();
+}
 
+class _HomePageState extends State<HomePage> {
+  final ScrollController _scrollController = ScrollController();
+  late final Store<AppState> _store;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(_onScroll);
+    _store = StoreProvider.of<AppState>(context, listen: false);
+  }
+
+  void _onScroll() {
+    final double loadMoreOffset = MediaQuery.of(context).size.height / 4;
+    final double maxScrollValue = _scrollController.position.maxScrollExtent;
+    final double currentScrollValue =_scrollController.offset;
+    final bool isLoading = _store.state.isLoading;
+    if (maxScrollValue - currentScrollValue < loadMoreOffset && !isLoading) {
+      _store.dispatch(const GetPhotosStart());
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return StoreConnector<AppState, AppState>(
       converter: (Store<AppState> store) => store.state,
       builder: (BuildContext context, AppState state) {
         final List<Photo> photos = state.photos;
         final bool isLoading = state.isLoading;
         final int page = state.page;
-        final ScrollController scrollController = ScrollController();
-        scrollController.addListener(() {
-          final double loadMoreOffset = MediaQuery.of(context).size.height / 4;
-          if (scrollController.position.maxScrollExtent - scrollController.offset < loadMoreOffset && !isLoading) {
-            store.dispatch(const GetPhotosStart());
-          }
-        });
         return Scaffold(
           appBar: AppBar(
             title: const Center(
@@ -35,19 +50,18 @@ class HomePage extends StatelessWidget {
           ),
           body: Builder(
             builder: (BuildContext context) {
-              if (isLoading && page == 1) {
+              if (isLoading && page == 1 && photos.isEmpty) {
                 return const Center(
                   child: CircularProgressIndicator(),
                 );
               } else {
                 return RefreshIndicator(
-                  onRefresh: () {
-                    store.dispatch(const RefreshPhotosStart());
-                    // TODO(mihnea): Return when isLoading becomes true
-                    return Future<void>(() => null);
+                  onRefresh: () async {
+                    _store.dispatch(const RefreshPhotosStart());
+                    await _store.onChange.where((AppState state) => !state.isLoading).first;
                   },
                   child: CustomScrollView(
-                    controller: scrollController,
+                    controller: _scrollController,
                     slivers: <Widget>[
                       SliverPadding(
                         padding: const EdgeInsets.all(10),
@@ -62,7 +76,7 @@ class HomePage extends StatelessWidget {
                               final Photo photo = photos[index];
                               return GestureDetector(
                                 onTap: () {
-                                  store.dispatch(SelectPhoto(photo));
+                                  _store.dispatch(SelectPhoto(photo));
                                   Navigator.pushNamed(
                                     context,
                                     '/photoDetails',
@@ -110,4 +124,5 @@ class HomePage extends StatelessWidget {
       },
     );
   }
+
 }
